@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+li {
+  list-style: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  text-shadow: 0px 0px 2px #000;
+  transition: all 0.3s;
+  outline: none;
+}
+a:hover {
+  color: #5d4cbd;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  padding: 1rem 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.action_btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.8rem 2rem;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: none;
+  transition: all 0.3s;
+}
+.action_btn:hover {
+  background-color:  #5d4cbd;
+  color: #fff;
+  border: 2px solid #5d4cbd;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+  display: none;
+  height: 0;
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+.dropdown_menu.opem {
+  height: 300px;
+}
+.dropdown_menu li {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HOME */
+#home {
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+#home h1 {
+  font-size: 3rem;
+}
+/* REPONSIVE DSIGNER */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .action_btn {
+    width: 100%;
+    text-align: center;
+  }
+}
